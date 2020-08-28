@@ -1,0 +1,24 @@
+<p>
+  hello-world works!
+</p>.
+<div class="hello-world">
+
+<h1 class="name">Name: {{ user.name}}</h1>
+<h3 class="title">title: {{ user.designation}}</h3>
+<button (click)="toogleCollapse()"> Expand</button>
+<button (click)="toogleCollapse()"> collapse</button>
+
+<div *ngIf="isCollapsed">
+    <p class="address">address: {{ user.address}}</p>
+    <div class="phone" *ngIf="user.phone.length>0">
+    <p>phone:</p>
+    <p>{{ user.phone[0]}}</p>
+    <p>{{ user.phone[1]}}</p>
+    </div>
+
+<div *ngIf="user.phone.length"><p>phone:</p>
+  <p *ngFor="let phoneNumber of user.phone">{{ phoneNumber}}</p> 
+ 
+</div>
+</div>
+</div>

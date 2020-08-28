@@ -1,0 +1,18 @@
+ 
+<h1>hello world</h1>
+ <date></date>
+   <app-hello-world [user]="user"></app-hello-world>
+   <p class="title"> Test paragraph</p>
+   <input type="text" [(ngModel)]="inputText">
+   {{inputText}}
+ <input type="text" (keyup)="onNameKeyUp($event)">
+ <button (click)="getProfile()">Get Profile</button>
+ <app-view-component></app-view-component> 
+    <!-- 
+<a [routerLink]="contactRoute" routerLinkActive="router-link-active" ="/contact">hello world</a>
+<a href="#">Testing</a> -->
+test
+   <router-outlet>
+
+    
+   </router-outlet>
