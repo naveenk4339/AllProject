@@ -1,0 +1,23 @@
+{
+  "name": "typescript-hello-world",
+  "version": "1.0.0",
+  "description": "Typescript Hello World",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "tsc && node src/index.js",
+    "hello": "node_modules/.bin/ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "request": "^2.88.0",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^9.6.0",
+    "@types/request": "^2.48.3"
+  }
+}
