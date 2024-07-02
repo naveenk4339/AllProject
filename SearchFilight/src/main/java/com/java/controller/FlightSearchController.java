@@ -21,31 +21,26 @@ public class FlightSearchController {
 	@RequestMapping("/allList")
 	public List<ModalData> getAllTopics()
 	{
-		System.out.println("test");
 		List<ModalData> avaliableFlightList =flightService.getAvaliableFlightList();
-
 //		Comparator<ModalData> sortByOrginName = (ModalData origin1, ModalData origin2) -> origin1.getOrigin()
 //				.compareTo(origin2.getOrigin());
 //		List<ModalData> sortedList = (List<ModalData>) sortByOrginName;
-		 
+		if(avaliableFlightList != null) 
 		avaliableFlightList.stream().sorted().collect(Collectors.toList());
-
 		return avaliableFlightList;
 	}
 
 	@RequestMapping("/flightInfo/{fightNumber}/{date}")
 	public ModalData getFlightDetails(@PathVariable String fightNumber, @PathVariable String date) {
 
-		System.out.println("test");
+//		System.out.println("test");
 		ModalData test =flightService.getFlightDetails(fightNumber, date);
-	
 		return test ;
 	}
 
 	@RequestMapping("/flightInfo/{origin}/{destination}/{date}")
 	public ModalData getFlightDetailsByOrigin(@PathVariable String origin, @PathVariable String destination,
 			@PathVariable String date) {
-
 		return flightService.getFlightDetailsByOrigin(origin, destination, date);
 	}
 
